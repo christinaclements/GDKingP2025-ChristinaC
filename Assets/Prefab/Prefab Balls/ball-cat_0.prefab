@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5750885928095003809}
   - component: {fileID: 6335615569689205334}
+  - component: {fileID: 7451712830771310273}
   m_Layer: 0
   m_Name: ball-cat_0
   m_TagString: Untagged
@@ -87,3 +88,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7451712830771310273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426959951997340129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b321b1aac078c244e8159da3f65466d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: -8.01
+  minY: -4.16
+  maxX: 7.8
+  maxY: 4.34
+  minSpeed: 50
+  maxSpeed: 1000
+  targetPosition: {x: 0, y: 0}
+  secondsToMaxSpeed: 0
