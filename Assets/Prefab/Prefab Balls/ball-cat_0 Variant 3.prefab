@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8487396936026994761, guid: 3a7cda5b2457887418f7a77149024286, type: 3}
+    - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
+      propertyPath: maxSpeed
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
+      propertyPath: minSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8426959951997340129, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Name
       value: ball-cat_0 Variant 3

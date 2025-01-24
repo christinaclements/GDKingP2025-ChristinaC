@@ -104,7 +104,16 @@ MonoBehaviour:
   minY: -4.16
   maxX: 7.8
   maxY: 4.34
-  minSpeed: 50
-  maxSpeed: 1000
+  minSpeed: 2
+  maxSpeed: 10
   targetPosition: {x: 0, y: 0}
-  secondsToMaxSpeed: 0
+  target: {fileID: 0}
+  minLaunchSpeed: 10
+  maxLaunchSpeed: 20
+  minTimeToLaunch: 0
+  maxTimeToLaunch: 0
+  cooldown: 0
+  launching: 0
+  launchDuration: 0
+  timeLastLaunch: 0
+  secondsToMaxSpeed: 60

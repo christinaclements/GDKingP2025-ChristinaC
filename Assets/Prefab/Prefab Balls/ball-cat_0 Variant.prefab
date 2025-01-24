@@ -54,11 +54,19 @@ PrefabInstance:
       objectReference: {fileID: 1338603833586857640, guid: 1de466f47c4972243bda4411e1b3f36b, type: 3}
     - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: maxSpeed
-      value: 50
+      value: 14.2
       objectReference: {fileID: 0}
     - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: minSpeed
-      value: 1
+      value: 4.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
+      propertyPath: maxLaunchSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
+      propertyPath: minLaunchSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8426959951997340129, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Name
