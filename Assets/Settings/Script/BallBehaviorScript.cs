@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices.WindowsRuntime;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BallBehaviorScript : MonoBehaviour {
@@ -24,8 +25,7 @@ public class BallBehaviorScript : MonoBehaviour {
     public float timeLaunchStart;
 
 
-    void Start()
-    {
+    void Start(){
         //secondsToMaxSpeed = 30;
         //minSpeed = .001f;
         //maxSpeed = 2.0f;
@@ -34,22 +34,22 @@ public class BallBehaviorScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update(){
-        
-        Vector2 currentPos = gameObject.GetComponent<Transform>().position;
         if (onCoolDown() == false) {
-            if (launching == true) {
+            if (launching == true){
                 float currentLaunchTime = Time.time - timeLaunchStart;
-                if (currentLaunchTime < launchDuration)
-                {
-                    launch();
-                }
-                else {
-                    launch();
+                if (currentLaunchTime > launchDuration){
+                    startCooldown();
                 }
             }
+            else {
+                Debug.Log("Tina");
+                launch();
+            }
+            
         }
-        float distance = Vector2.Distance((Vector2)transform.position, targetPosition);
-        if (distance > 0.1f){
+        Vector2 currentPos = gameObject.GetComponent<Transform>().position;
+        float distance = Vector2.Distance(currentPos, targetPosition);
+        if (distance > 0.1){
             float difficulty = getDifficultyPercentage();
             float currentSpeed;
             if (launching == true){
@@ -95,9 +95,23 @@ public class BallBehaviorScript : MonoBehaviour {
     public bool onCoolDown() {
         bool result = false;
         float timeSinceLastLaunch = Time.time - timeLastLaunch;
-        if (timeSinceLastLaunch < cooldown){
+        Debug.Log("tLL: " + timeLastLaunch);
+        Debug.Log("tsLL: " + timeSinceLastLaunch);
+           Debug.Log("CD: " + cooldown);
+        Debug.Log("diff: " + (timeSinceLastLaunch < cooldown));
+
+
+        if (timeSinceLastLaunch < cooldown)
+        {
+
+
             result = true;
+
         }
+        else {
+            Debug.Log("result: " + result);
+        }
+     
         return result;
     }
     public void startCooldown(){
