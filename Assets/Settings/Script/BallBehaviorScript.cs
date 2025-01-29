@@ -42,7 +42,6 @@ public class BallBehaviorScript : MonoBehaviour {
                 }
             }
             else {
-                Debug.Log("Tina");
                 launch();
             }
             
@@ -95,10 +94,6 @@ public class BallBehaviorScript : MonoBehaviour {
     public bool onCoolDown() {
         bool result = false;
         float timeSinceLastLaunch = Time.time - timeLastLaunch;
-        Debug.Log("tLL: " + timeLastLaunch);
-        Debug.Log("tsLL: " + timeSinceLastLaunch);
-           Debug.Log("CD: " + cooldown);
-        Debug.Log("diff: " + (timeSinceLastLaunch < cooldown));
 
 
         if (timeSinceLastLaunch < cooldown)

@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3946445694772657588, guid: 033869c03f8058e48beef7560ce43880, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1630695052}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -215,8 +219,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -328.23004, y: 14.580017}
-  m_SizeDelta: {x: -680.04, y: -325.01}
+  m_AnchoredPosition: {x: -330.63, y: 14.98}
+  m_SizeDelta: {x: -684.85, y: -325.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95853611
 MonoBehaviour:
@@ -274,7 +278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &108417519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,8 +377,9 @@ GameObject:
   - component: {fileID: 475302361}
   - component: {fileID: 475302363}
   - component: {fileID: 475302362}
+  - component: {fileID: 475302364}
   m_Layer: 5
-  m_Name: Textheader
+  m_Name: timerTMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,8 +401,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.037}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -2}
-  m_SizeDelta: {x: 70.45, y: 62.52}
+  m_AnchoredPosition: {x: 6, y: -11}
+  m_SizeDelta: {x: 88.75, y: 60.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475302362
 MonoBehaviour:
@@ -423,8 +428,8 @@ MonoBehaviour:
 
     00:00'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -500,6 +505,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475302360}
   m_CullTransparentMesh: 1
+--- !u!114 &475302364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475302360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35aeb42f6ba0a2347bcb9483287bc860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1084,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8685117916018014190, guid: 57fb16c34da938b4695f7f6e712fa084, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1630695052}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1539,7 +1560,7 @@ GameObject:
   - component: {fileID: 1602985257}
   - component: {fileID: 1602985256}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: TimerPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1900,6 +1921,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8948259433650781387, guid: d8416a396e7b53c47bc4baee1889329e, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1630695052}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1915,11 +1940,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5750885928095003809, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.25
+      value: -3.18
       objectReference: {fileID: 0}
     - target: {fileID: 5750885928095003809, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.42
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5750885928095003809, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_LocalPosition.z
