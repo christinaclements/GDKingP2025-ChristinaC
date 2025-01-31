@@ -33,7 +33,7 @@ public class BallBehaviorScript : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
         if (onCoolDown() == false) {
             if (launching == true){
                 float currentLaunchTime = Time.time - timeLaunchStart;
@@ -98,10 +98,7 @@ public class BallBehaviorScript : MonoBehaviour {
 
         if (timeSinceLastLaunch < cooldown)
         {
-
-
             result = true;
-
         }
         else {
             Debug.Log("result: " + result);
@@ -113,4 +110,10 @@ public class BallBehaviorScript : MonoBehaviour {
         timeLastLaunch = Time.time;
         launching = false;
     }
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Debug.Log(this + " Collided with: " + collision.gameObject.name);
+    }
+    
+        
+    
 }
