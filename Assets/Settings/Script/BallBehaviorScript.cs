@@ -23,6 +23,8 @@ public class BallBehaviorScript : MonoBehaviour {
     public float timeSinceLastLaunch;
     public int secondsToMaxSpeed;
     public float timeLaunchStart;
+    public Rigidbody2D body;
+    public bool rerouting;
 
 
     void Start(){
@@ -44,9 +46,9 @@ public class BallBehaviorScript : MonoBehaviour {
             else {
                 launch();
             }
-            
         }
-        Vector2 currentPos = gameObject.GetComponent<Transform>().position;
+        body = GetComponent<Rigidbody2D>();
+        Vector2 currentPos = body.position;
         float distance = Vector2.Distance(currentPos, targetPosition);
         if (distance > 0.1){
             float difficulty = getDifficultyPercentage();
@@ -63,7 +65,7 @@ public class BallBehaviorScript : MonoBehaviour {
             }
             currentSpeed = currentSpeed * Time.deltaTime;
             Vector2 newPosition = Vector2.MoveTowards(currentPos, targetPosition, currentSpeed);
-            transform.position = newPosition;
+            body.MovePosition(newPosition);
         }
         else { // You are at the target
             if (launching == true) {
@@ -77,15 +79,14 @@ public class BallBehaviorScript : MonoBehaviour {
         float randomY = Random.Range(minY, maxY);
         Vector2 v = new Vector2(randomX, randomY);
         return v;
-
     }
     public float getDifficultyPercentage() {
         float difficulty = Mathf.Clamp01(Time.timeSinceLevelLoad / secondsToMaxSpeed);
         return difficulty;
-
     }
     public void launch() {
-        targetPosition = target.transform.position;
+        Rigidbody2D targetBody = target.GetComponent<Rigidbody2D>();
+        targetPosition = targetBody.position;
         if (launching == false) {
             timeLaunchStart = Time.time;
             launching = true;
@@ -94,16 +95,12 @@ public class BallBehaviorScript : MonoBehaviour {
     public bool onCoolDown() {
         bool result = false;
         float timeSinceLastLaunch = Time.time - timeLastLaunch;
-
-
-        if (timeSinceLastLaunch < cooldown)
-        {
+        if (timeSinceLastLaunch < cooldown){
             result = true;
         }
         else {
             Debug.Log("result: " + result);
         }
-     
         return result;
     }
     public void startCooldown(){
@@ -112,8 +109,33 @@ public class BallBehaviorScript : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision) {
         Debug.Log(this + " Collided with: " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Wall"){
+            targetPosition = getRandomPosition();
+        }
+        if (collision.gameObject.tag == "Ball"){
+            Reroute(collision);
+        }
     }
     
-        
-    
+    public void initialPosition(){
+        body = GetComponent<Rigidbody2D>();
+        body.position = getRandomPosition();
+        targetPosition = getRandomPosition();
+        launching = false;
+        rerouting = true;
+    }
+     public void Reroute(Collision2D collision){
+        GameObject otherBall = collision.gameObject;
+        if (rerouting == true){
+            otherBall.GetComponent<BallBehaviorScript>().rerouting = false;
+            Rigidbody2D ballBody = otherBall.GetComponent<Rigidbody2D>();
+            Vector2 contact = collision.GetContact(0).normal;
+            targetPosition = Vector2.Reflect(targetPosition, contact).normalized;
+            launching = false;
+            float seperationDistance = 0.1f;
+            ballBody.position += contact * seperationDistance;
+        } else{
+            rerouting = true;
+        }
+    }  
 }

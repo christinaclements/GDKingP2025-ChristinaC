@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 132235528756252218}
   m_Layer: 0
   m_Name: ball-cat_0
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,8 +111,8 @@ MonoBehaviour:
   maxSpeed: 10
   targetPosition: {x: 0, y: 0}
   target: {fileID: 0}
-  minLaunchSpeed: 10
-  maxLaunchSpeed: 20
+  minLaunchSpeed: 11
+  maxLaunchSpeed: 17
   minTimeToLaunch: 0
   maxTimeToLaunch: 0
   cooldown: 2
@@ -122,6 +122,8 @@ MonoBehaviour:
   timeSinceLastLaunch: 0
   secondsToMaxSpeed: 60
   timeLaunchStart: 0
+  body: {fileID: 0}
+  rerouting: 0
 --- !u!50 &1177537393698733169
 Rigidbody2D:
   serializedVersion: 5
@@ -147,7 +149,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &1000664498799248051
 CircleCollider2D:
