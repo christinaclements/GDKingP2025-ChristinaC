@@ -106,6 +106,14 @@ MonoBehaviour:
   newPosition: {x: 0, y: 0}
   mousePosG: {x: 0, y: 0, z: 0}
   body: {fileID: 0}
+  dashSpeed: 5
+  baseSpeed: 2
+  dashing: 0
+  dashDuration: 2
+  timeDashStart: 0
+  cooldownRate: 0
+  cooldown: 5
+  timeLastDashEnded: 0
 --- !u!60 &-5781233641683477964
 PolygonCollider2D:
   m_ObjectHideFlags: 0

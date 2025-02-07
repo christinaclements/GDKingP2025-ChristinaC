@@ -5,7 +5,6 @@ public class TimerBehavior : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private float timer;
     private TextMeshProUGUI textField;
-
     
     void Start(){
         textField = GetComponent<TextMeshProUGUI>();

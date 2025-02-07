@@ -2099,6 +2099,12 @@ MonoBehaviour:
   newPosition: {x: 0, y: 0}
   mousePosG: {x: 0, y: 0, z: 0}
   body: {fileID: 0}
+  dashSpeed: 5
+  baseSpeed: 2
+  dashing: 0
+  dashDuration: 0
+  timeDashStart: 0
+  timeLastDashEnded: 0
 --- !u!50 &1630695056
 Rigidbody2D:
   serializedVersion: 5
@@ -2310,6 +2316,7 @@ GameObject:
   - component: {fileID: 1825482410}
   - component: {fileID: 1825482412}
   - component: {fileID: 1825482411}
+  - component: {fileID: 1825482413}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2389,7 +2396,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2435,6 +2442,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825482409}
   m_CullTransparentMesh: 1
+--- !u!114 &1825482413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825482409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 932e264abd40821448e51fbe5c6a80e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2052037246
 PrefabInstance:
   m_ObjectHideFlags: 0
