@@ -16,6 +16,7 @@ public class PinBehavior : MonoBehaviour{
     public static float cooldownRate = 5.0f;
     public static float cooldown;
     public float timeLastDashEnded;
+    public float start;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
         cam = Camera.main;
@@ -41,6 +42,8 @@ public class PinBehavior : MonoBehaviour{
     }
     private void Dash(){
         if (dashing == true){
+            float currentTime = Time.time;
+            
             float howLong = Time.time - timeDashStart;
             if (howLong > dashDuration) { 
                 dashing = false; 
