@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5528276051476230330
+--- !u!1001 &419058929725918843
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 132235528756252218, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 8.64
+      value: 7.7
       objectReference: {fileID: 0}
     - target: {fileID: 132235528756252218, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 8.47
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 1000664498799248051, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Radius
-      value: 4.1138897
+      value: 3.7718215
       objectReference: {fileID: 0}
     - target: {fileID: 1000664498799248051, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Enabled
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000664498799248051, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0024818995
+      value: 0.006037461
       objectReference: {fileID: 0}
     - target: {fileID: 1000664498799248051, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Offset.y
-      value: -0.021522045
+      value: -0.12606104
       objectReference: {fileID: 0}
     - target: {fileID: 5750885928095003809, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -79,22 +79,18 @@ PrefabInstance:
     - target: {fileID: 6335615569689205334, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2612753881109755140, guid: 3153e79fd26f78f45bb9aaf0622a4cb4, type: 3}
+      objectReference: {fileID: 8050257667232559749, guid: 92cf9e05c87b4414a981620d688c2579, type: 3}
     - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: maxSpeed
-      value: 15.8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: minSpeed
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7451712830771310273, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
-      propertyPath: minLaunchSpeed
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8426959951997340129, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
       propertyPath: m_Name
-      value: ball-cat_0 Variant 4
+      value: ball-columbia
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

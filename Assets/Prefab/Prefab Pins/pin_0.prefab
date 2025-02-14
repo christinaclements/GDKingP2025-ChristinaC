@@ -102,18 +102,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932a841f750c9b649abffe7b35556a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   newPosition: {x: 0, y: 0}
   mousePosG: {x: 0, y: 0, z: 0}
   body: {fileID: 0}
-  dashSpeed: 5
-  baseSpeed: 2
+  dashSpeed: 10
+  baseSpeed: 5
   dashing: 0
   dashDuration: 2
   timeDashStart: 0
-  cooldownRate: 0
-  cooldown: 5
   timeLastDashEnded: 0
+  start: 0
 --- !u!60 &-5781233641683477964
 PolygonCollider2D:
   m_ObjectHideFlags: 0

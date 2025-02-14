@@ -31,7 +31,8 @@ public class BallBehaviorScript : MonoBehaviour {
         //secondsToMaxSpeed = 30;
         //minSpeed = .001f;
         //maxSpeed = 2.0f;
-        targetPosition = getRandomPosition();
+        //targetPosition = getRandomPosition();
+        initialPosition();
     }
 
     // Update is called once per frame
@@ -120,6 +121,7 @@ public class BallBehaviorScript : MonoBehaviour {
     public void initialPosition(){
         body = GetComponent<Rigidbody2D>();
         body.position = getRandomPosition();
+        //transform.position = getRandomPosition();
         targetPosition = getRandomPosition();
         launching = false;
         rerouting = true;
@@ -137,5 +139,14 @@ public class BallBehaviorScript : MonoBehaviour {
         } else{
             rerouting = true;
         }
-    }  
+    }
+    public void setBounds(float miX, float maX, float miY, float maY){
+        minX = miX;
+        maxX = maX;
+        minY = miY;
+        maxY = maY;
+    }
+    public void setTarget(GameObject pin){
+        target = pin;
+    }
 }
