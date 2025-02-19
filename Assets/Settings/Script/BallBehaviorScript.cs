@@ -117,7 +117,19 @@ public class BallBehaviorScript : MonoBehaviour {
             Reroute(collision);
         }
     }
-    
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Debug.Log(this + " Collided with: " + collision.gameObject.name);
+        if (collision.gameObject.tag == "Wall")
+        {
+            targetPosition = getRandomPosition();
+        }
+        if (collision.gameObject.tag == "Ball")
+        {
+            Reroute(collision);
+        }
+    }
+
     public void initialPosition(){
         body = GetComponent<Rigidbody2D>();
         body.position = getRandomPosition();

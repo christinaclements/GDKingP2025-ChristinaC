@@ -737,6 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35aeb42f6ba0a2347bcb9483287bc860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startTime: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,14 +899,14 @@ MonoBehaviour:
   - {fileID: 2595135361039854886, guid: 366d285d3cec2e04bb5e7491d6a89d52, type: 3}
   - {fileID: 1227590131861814490, guid: ac75ecbd35b947349af38a96c7e1cc8a, type: 3}
   - {fileID: 4056321230514731355, guid: 3abf823626078584492e5ecb579c3786, type: 3}
-  targetObject:
-  - {fileID: 1630695052}
+  targetObject: {fileID: 1630695052}
   startTime: 0
   spawnRatio: 6
-  minX: -9.63
-  maxX: 7.8
-  minY: -4.16
-  maxY: 4.34
+  minX: -5.57
+  maxX: 5.53
+  minY: 3.32
+  maxY: -3.67
+  pinsDB: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -0}
+  m_AnchoredPosition: {x: 8, y: 0}
   m_SizeDelta: {x: 119.69, y: 32.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177903546
@@ -1889,6 +1890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1727343617}
   - component: {fileID: 1727343616}
+  - component: {fileID: 1727343618}
   m_Layer: 5
   m_Name: Arena4_0
   m_TagString: Untagged
@@ -1967,6 +1969,37 @@ Transform:
   - {fileID: 420545014}
   m_Father: {fileID: 108417522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.274}
+--- !u!114 &1727343618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727343615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8016ed00effc5de4f9002ada8880572a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballVariants:
+  - {fileID: 8426959951997340129, guid: 136c3d1e03eaf5d4ea562a9a83c3a0bf, type: 3}
+  - {fileID: 8152175642360301466, guid: 5b9d8e05ca7ca0642acda0bb2c19a1ca, type: 3}
+  - {fileID: 8049556171766127595, guid: d8416a396e7b53c47bc4baee1889329e, type: 3}
+  - {fileID: 7718292907329114318, guid: 57fb16c34da938b4695f7f6e712fa084, type: 3}
+  - {fileID: 2693092414862498452, guid: 033869c03f8058e48beef7560ce43880, type: 3}
+  - {fileID: 4671639352620995158, guid: 0dfc84ef16c0c3640bf31d15794eace9, type: 3}
+  - {fileID: 4953260024279178306, guid: 571c14e90bedc8d488c6d27182ac4593, type: 3}
+  - {fileID: 2595135361039854886, guid: 366d285d3cec2e04bb5e7491d6a89d52, type: 3}
+  - {fileID: 1227590131861814490, guid: ac75ecbd35b947349af38a96c7e1cc8a, type: 3}
+  - {fileID: 4056321230514731355, guid: 3abf823626078584492e5ecb579c3786, type: 3}
+  targetObject: {fileID: 1630695052}
+  startTime: 0
+  spawnRatio: 6
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0
+  pinsDB: {fileID: 11400000, guid: 0cbdb534ad40c1a4e80b919c8c889575, type: 2}
 --- !u!1 &1825482409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,11 +2162,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7085761171774251717, guid: 9385c38557eba5f4a8e611bd2d6eaf4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.8265
+      value: -5.81
       objectReference: {fileID: 0}
     - target: {fileID: 7085761171774251717, guid: 9385c38557eba5f4a8e611bd2d6eaf4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3154
+      value: 3.24
       objectReference: {fileID: 0}
     - target: {fileID: 7085761171774251717, guid: 9385c38557eba5f4a8e611bd2d6eaf4d, type: 3}
       propertyPath: m_LocalPosition.z

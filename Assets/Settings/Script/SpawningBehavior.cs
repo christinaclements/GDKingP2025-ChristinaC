@@ -12,9 +12,10 @@ public class SpawningBehavior : MonoBehaviour
     public float maxX;
     public float minY;
     public float maxY;
+    public Pins pinsDB;
 
      void Start(){
-        spawnBall();
+        //spawnBall();
     }
     void Update() {
         float currentTime = Time.time;
@@ -30,7 +31,7 @@ public class SpawningBehavior : MonoBehaviour
             newObject = Instantiate(ballVariants[selection], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             BallBehaviorScript ballBehavior = newObject.GetComponent<BallBehaviorScript>();
             ballBehavior.setBounds(minX, maxX, minY, maxY);
-            //ballBehavior.setTarget(targetObject);
+            ballBehavior.setTarget(targetObject);
             ballBehavior.initialPosition();
         }
         startTime = Time.time;
