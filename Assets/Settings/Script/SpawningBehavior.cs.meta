@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 8016ed00effc5de4f9002ada8880572a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - targetObject: {instanceID: 0}
+  - pinsDB: {fileID: 11400000, guid: 0cbdb534ad40c1a4e80b919c8c889575, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

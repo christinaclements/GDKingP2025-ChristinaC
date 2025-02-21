@@ -26,7 +26,6 @@ public class BallBehaviorScript : MonoBehaviour {
     public Rigidbody2D body;
     public bool rerouting;
 
-
     void Start(){
         //secondsToMaxSpeed = 30;
         //minSpeed = .001f;
@@ -35,7 +34,6 @@ public class BallBehaviorScript : MonoBehaviour {
         initialPosition();
     }
 
-    // Update is called once per frame
     void FixedUpdate(){
         if (onCoolDown() == false) {
             if (launching == true){
@@ -117,19 +115,15 @@ public class BallBehaviorScript : MonoBehaviour {
             Reroute(collision);
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
+    private void OnCollisionStay2D(Collision2D collision) {
         Debug.Log(this + " Collided with: " + collision.gameObject.name);
-        if (collision.gameObject.tag == "Wall")
-        {
+        if (collision.gameObject.tag == "Wall"){
             targetPosition = getRandomPosition();
         }
-        if (collision.gameObject.tag == "Ball")
-        {
+        if (collision.gameObject.tag == "Ball"){
             Reroute(collision);
         }
     }
-
     public void initialPosition(){
         body = GetComponent<Rigidbody2D>();
         body.position = getRandomPosition();

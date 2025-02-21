@@ -1,8 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpawningBehavior : MonoBehaviour
-{
+public class SpawningBehavior : MonoBehaviour {
     public GameObject[] ballVariants;
     public GameObject targetObject;
     GameObject newObject;
@@ -15,7 +14,10 @@ public class SpawningBehavior : MonoBehaviour
     public Pins pinsDB;
 
      void Start(){
-        //spawnBall();
+        //startTime = Time.time;
+        spawnPin();
+        spawnBall();
+        
     }
     void Update() {
         float currentTime = Time.time;
@@ -35,5 +37,8 @@ public class SpawningBehavior : MonoBehaviour
             ballBehavior.initialPosition();
         }
         startTime = Time.time;
+    }
+    void spawnPin(){
+        targetObject = Instantiate(pinsDB.getPin(PinsDB.selection).prefab, new Vector3 (0.0f, 0.0f, 0.0f),Quaternion.identity);
     }
 }
