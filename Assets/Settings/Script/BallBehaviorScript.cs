@@ -1,6 +1,10 @@
 using System.Runtime.InteropServices.WindowsRuntime;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
+using UnityEngine.UIElements;
 
 public class BallBehaviorScript : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +29,8 @@ public class BallBehaviorScript : MonoBehaviour {
     public float timeLaunchStart;
     public Rigidbody2D body;
     public bool rerouting;
+    public static int score;
+    
 
     void Start(){
         //secondsToMaxSpeed = 30;
@@ -32,6 +38,8 @@ public class BallBehaviorScript : MonoBehaviour {
         //maxSpeed = 2.0f;
         //targetPosition = getRandomPosition();
         initialPosition();
+        
+        
     }
 
     void FixedUpdate(){
@@ -39,6 +47,10 @@ public class BallBehaviorScript : MonoBehaviour {
             if (launching == true){
                 float currentLaunchTime = Time.time - timeLaunchStart;
                 if (currentLaunchTime > launchDuration){
+                    Debug.Log("B " + ScoreBehavior.score++);
+                    //ScoreBehavior.score++;
+                    ScoreBehavior.increase();
+                    Debug.Log("A " + ScoreBehavior.score++);
                     startCooldown();
                 }
             }
